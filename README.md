@@ -37,3 +37,24 @@ Multer (for image handling)
 
 Image Hosting
 ImageKit
+
+tributary-system
+│
+├── Backend
+│   ├── src
+│   │   ├── controllers
+│   │   ├── middleware
+│   │   ├── models
+│   │   ├── routes
+│   │   └── services
+│   │
+│   └── server.js
+│
+├── frontend
+│   ├── src
+│   │   ├── pages
+│   │   └── styles.css
+│
+└── README.md
+
+
