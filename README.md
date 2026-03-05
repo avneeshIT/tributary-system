@@ -57,13 +57,4 @@ tributary-system
 │
 └── README.md
 
-Future Improvements
 
-Tribute search
-Like system
-Tribute detail page
-Pagination
-
-Author
-Avneesh Gupta
-B.Tech IT Student
