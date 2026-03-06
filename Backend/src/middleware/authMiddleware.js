@@ -10,20 +10,20 @@ const authMiddleware = async (req, res, next) => {
       req.headers.authorization &&
       req.headers.authorization.startsWith("Bearer")
     ) {
-      // 2️⃣ Extract token
+      //  Extract token
       token = req.headers.authorization.split(" ")[1];
 
-      // 3️⃣ Verify token
+      //  Verify token
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-      // 4️⃣ Find user in DB (exclude password)
+      //  Find user in DB (exclude password)
       const user = await User.findById(decoded.id).select("-password");
 
       if (!user) {
         return res.status(401).json({ message: "User not found" });
       }
 
-      // 5️⃣ Attach user to request
+      //  Attach user to request
       req.user = user;
 
       next();

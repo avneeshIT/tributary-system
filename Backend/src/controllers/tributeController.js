@@ -34,8 +34,6 @@ exports.createTribute = async (req, res, next) => {
 };
 
 
-
-
 exports.updateTribute = async (req, res,next) => {
   try {
     const tribute = await tributeService.updateTribute(req);

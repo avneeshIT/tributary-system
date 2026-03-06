@@ -83,7 +83,6 @@ exports.deleteTribute = async (req) => {
   if (!tribute) {
 throw new AppError("Tribute not found", 404);  }
 
-  // Authorization check
   if (tribute.createdBy.toString() !== req.user._id.toString()) {
 throw new AppError("You are not authorized to delete this tribute", 403);  }
 

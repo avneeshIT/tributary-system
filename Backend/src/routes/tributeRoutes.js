@@ -5,7 +5,6 @@ const authMiddleware = require("../middleware/authMiddleware");
 const upload = require("../middleware/uploadMiddleware");
 
 
-// Public route - get all tributes
 router.get("/", tributeController.getAllTributes);
 
 
