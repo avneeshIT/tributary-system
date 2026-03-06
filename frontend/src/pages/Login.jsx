@@ -12,7 +12,7 @@ function Login({ openRegister }) {
     try {
 
       const res = await axios.post(
-        "http://localhost:5001/api/auth/login",
+        "https://tributary-system.onrender.com/api/auth/login",
         {
           email,
           password

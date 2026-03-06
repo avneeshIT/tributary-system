@@ -13,7 +13,7 @@ function Register({ closeModal }) {
     try{
 
       await axios.post(
-        "http://localhost:5001/api/auth/register",
+        "https://tributary-system.onrender.com/api/auth/register",
         {
           name,
           email,

@@ -28,8 +28,8 @@ function App() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5001/api/tributes/${id}`,
-        {
+   `https://tributary-system.onrender.com/api/tributes/${id}`, 
+          {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -46,8 +46,8 @@ function App() {
 
   const fetchTributes = () => {
     axios
-      .get("http://localhost:5001/api/tributes")
-      .then((res) => {
+     .get("https://tributary-system.onrender.com/api/tributes") 
+     .then((res) => {
         setTributes(res.data);
       })
       .catch((err) => {
@@ -125,7 +125,7 @@ function App() {
 
               {token && user?.id === tribute.createdBy?._id && (
   <>
-  < div className="card_actions">
+  < div className="card-actions">
     <button
       className="edit-btn"
       onClick={() => openEditModal(tribute)}

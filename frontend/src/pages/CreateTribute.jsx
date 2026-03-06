@@ -22,7 +22,7 @@ const isEdit = tribute ? true : false;
       if (isEdit) {
 
   await axios.put(
-    `http://localhost:5001/api/tributes/${tribute._id}`,
+    `https://tributary-system.onrender.com/api/tributes/${tribute._id}`,
     formData,
     {
       headers: {
@@ -34,7 +34,7 @@ const isEdit = tribute ? true : false;
 } else {
 
   await axios.post(
-    "http://localhost:5001/api/tributes",
+    "https://tributary-system.onrender.com/api/tributes",
     formData,
     {
       headers: {
